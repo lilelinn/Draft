@@ -45,5 +45,9 @@ print(lev2)
 
 # t-test
 
-t.test(beoordeling.begrip ~ methode, data=samengevoegde_dataset, var.equal=TRUE, na.rm=TRUE, alternative = 'less')
+t.test(beoordeling.begrip ~ methode, data=samengevoegde_dataset, var.equal=TRUE, na.rm=TRUE)
 
+# effect size
+library(effectsize)
+
+cohens_d(beoordeling.begrip ~ methode, data=samengevoegde_dataset)

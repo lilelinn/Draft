@@ -40,3 +40,7 @@ print(lev2)
 
 t.test(tijd ~ methode, data=samengevoegde_dataset, var.equal=TRUE, na.rm=TRUE, alternative="greater")
 
+# effect size
+library(effectsize)
+
+cohens_d(tijd ~ methode, data=samengevoegde_dataset)
